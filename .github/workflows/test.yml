@@ -40,5 +40,5 @@ jobs:
       - name: Run Molecule tests
         working-directory: ./
         run: |
-          export ANSIBLE_COLLECTIONS_PATHS=~/.ansible/collections
+          export ANSIBLE_COLLECTIONS_PATH=~/.ansible/collections 
           molecule test
