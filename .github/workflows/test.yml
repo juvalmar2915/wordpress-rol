@@ -37,6 +37,12 @@ jobs:
           ansible-galaxy collection install community.general -p ~/.ansible/collections
           ansible-galaxy install geerlingguy.mysql geerlingguy.php -p ~/.ansible/roles
 
+          echo "Listing contents of ~/.ansible/collections/ansible_collections/community/general/"
+          ls -la ~/.ansible/collections/ansible_collections/community/general/
+          echo "Listing contents of ~/.ansible/collections/"
+          ls -la ~/.ansible/collections/
+          echo "Current HOME directory: $HOME"
+
       - name: Install Vagrant
         run: |
           wget https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1-1_amd64.deb -O vagrant.deb
