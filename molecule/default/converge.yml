@@ -122,6 +122,6 @@
     - role: geerlingguy.php # Default packages for Debian if applicable
       when: ansible_os_family == 'Debian'
 
-    tasks: # como toma mal la ruta en vez de aclararlo como role lo aclaro como task
+  tasks: # como toma mal la ruta en vez de aclararlo como role lo aclaro como task
     - name: Execute main tasks of the wordpress-rol
       ansible.builtin.include_tasks: ../tasks/main.yml
