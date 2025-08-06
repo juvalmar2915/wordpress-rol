@@ -23,6 +23,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install docker ansible-core==2.18.4 molecule molecule-plugins[docker] 
 
-      - name: Run Molecule test
+      - name: Run Molecule steps
         run: |
-          molecule test
+          molecule destroy
+          molecule syntax
+          molecule create
+          molecule prepare
+          molecule converge
+          molecule verify
+          molecule destroy
